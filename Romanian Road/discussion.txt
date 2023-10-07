@@ -1,0 +1,69 @@
+                            DISCUSSION
+BFS Ouputs:
+
+Path from Neamt to Bucharest: Neamt -> Iasi -> Vaslui -> Urziceni -> Bucharest.
+Total cost: 406
+Path from Oradea to Bucharest: Oradea -> Sibiu -> Fagaras -> Bucharest.
+Total cost: 461
+Path from Timisoara to Bucharest: Timisoara -> Arad -> Sibiu -> Fagaras -> Bucharest.
+Total cost: 568
+
+DFS Outputs:
+Path from Neamt to Bucharest: Neamt -> Iasi -> Vaslui -> Urziceni -> Bucharest.
+Total cost: 406
+Path from Oradea to Bucharest: Oradea -> Zerind -> Arad -> Sibiu -> Fagaras -> Bucharest.
+Total cost: 596
+Path from Timisoara to Bucharest: Timisoara -> Arad -> Zerind -> Oradea -> Sibiu -> Fagaras -> Bucharest.
+Total cost: 725
+
+A* Search Outputs:
+Path from Neamt to Bucharest: Neamt -> Iasi -> Vaslui -> Urziceni -> Bucharest
+Total cost: 406
+Path from Oradea to Bucharest: Oradea -> Sibiu -> Rimnicu Vilcea -> Pitesti -> Bucharest
+Total cost: 429
+Path from Timisoara to Bucharest: Timisoara -> Arad -> Sibiu -> Rimnicu Vilcea -> Pitesti -> Bucharest
+Total cost: 536
+
+// EVALUATION //
+
+ABOUT CORRECTNESS:
+
+A* Search:
+Correctness: A* is guaranteed to find the best solution if the heuristic is admissible (never overestimates) and the cost function is appropriate.
+
+Breadth-First Search (BFS):
+Correctness: BFS is guaranteed to find a solution if one exists, and it finds the shortest path in terms of steps.
+
+Depth-First Search (DFS):
+Correctness: DFS is guaranteed to find a solution if one exists, but it may not necessarily find the shortest path.
+
+All tests passed, according to user test upon perception with graphical map
+
+ABOUT EFFICIENCY:
+From Neamt to Bucharest: 
+    -> all algorithms gave out the same Path and same cost
+From Oradea to Bucharest: 
+    -> BFS gave out the path with the fewest cities visited (4), while DFS visited the most cities (6)
+    -> DFS gave out the most costly path (596), while A* search gave out the least costly (429)
+From Timisoara to Bucharest: 
+    -> BFS gave out the path with the fewest cities visited (5), while DFS visited the most cities (7)
+    -> DFS also gave out the most costly path (725), while A* search also gave out the least costly one. (536)
+
+A* Search:
+
+Worst Case: A* does poorly if the cost estimate is wrong, causing it to check lots of unnecessary nodes.
+Normal Case: A* works well with a good estimate and finds the best solution efficiently.
+Best Case: The best case is when you're already at the goal state, but it's rare.
+
+Breadth-First Search (BFS):
+
+Worst Case: BFS can be slow if the goal is far down one branch of the tree.
+Normal Case: BFS is efficient for shallow or moderately deep searches, finding the shortest solution.
+Best Case: It's quickest when the start state is the goal.
+
+Depth-First Search (DFS):
+
+Worst Case: DFS takes a while if the goal is deep down a branch before backtracking.
+Normal Case: It's good if the goal is along one branch, often finding a solution.
+Best Case: The fastest case is when the start state is the goal.
+ABOUT CORRECTNESS:
