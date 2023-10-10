@@ -1,5 +1,4 @@
-// C++ code to implement priority-queue
-// using array implementation of
+// C++ code to implement priority-queue using array implementation of
 // binary heap
 
 #include <bits/stdc++.h>
@@ -8,32 +7,19 @@ using namespace std;
 int H[50];
 int size = -1;
 
-// Function to return the index of the
-// parent node of a given node
+// Function to return the index of the parent node of a given node
 int parent(int i)
-{
+{   return (i - 1) / 2;}
 
-	return (i - 1) / 2;
-}
-
-// Function to return the index of the
-// left child of the given node
+// Function to return the index of the left child of the given node
 int leftChild(int i)
-{
+{   return ((2 * i) + 1);}
 
-	return ((2 * i) + 1);
-}
-
-// Function to return the index of the
-// right child of the given node
+// Function to return the index of the right child of the given node
 int rightChild(int i)
-{
+{   return ((2 * i) + 2);}
 
-	return ((2 * i) + 2);
-}
-
-// Function to shift up the node in order
-// to maintain the heap property
+// Function to shift up the node in order to maintain the heap property
 void shiftUp(int i)
 {
 	while (i > 0 && H[parent(i)] < H[i]) {
@@ -46,8 +32,7 @@ void shiftUp(int i)
 	}
 }
 
-// Function to shift down the node in
-// order to maintain the heap property
+// Function to shift down the node in order to maintain the heap property
 void shiftDown(int i)
 {
 	int maxIndex = i;
@@ -84,25 +69,21 @@ void insert(int p)
 	shiftUp(size);
 }
 
-// Function to extract the element with
-// maximum priority
+// Function to extract the element with maximum priority
 int extractMax()
 {
 	int result = H[0];
 
-	// Replace the value at the root
-	// with the last leaf
+	// Replace the value at the root with the last leaf
 	H[0] = H[size];
 	size = size - 1;
 
-	// Shift down the replaced element
-	// to maintain the heap property
+	// Shift down the replaced element to maintain the heap property
 	shiftDown(0);
 	return result;
 }
 
-// Function to change the priority
-// of an element
+// Function to change the priority of an element
 void changePriority(int i, int p)
 {
 	int oldp = H[i];
@@ -116,22 +97,19 @@ void changePriority(int i, int p)
 	}
 }
 
-// Function to get value of the current
-// maximum element
+// Function to get value of the current maximum element
 int getMax()
 {
 
 	return H[0];
 }
 
-// Function to remove the element
-// located at given index
+// Function to remove the element located at given index
 void remove(int i)
 {
 	H[i] = getMax() + 1;
 
-	// Shift the node to the root
-	// of the heap
+	// Shift the node to the root of the heap
 	shiftUp(i);
 
 	// Extract the node
@@ -141,19 +119,18 @@ void remove(int i)
 // Driver Code
 int main()
 {
-
-	/*		 45
-			/	 \
-		31	 14
-		/ \ / \
-		13 20 7 11
-		/ \
-	12 7
-	Create a priority queue shown in 
-	example in a binary max heap form.
-	Queue will be represented in the
-	form of array as:
-	45 31 14 13 20 7 11 12 7 */
+	/*	
+           45
+		  /	 \
+		31	   14
+	   / \     / \
+	  13  20  7   11
+	 /  \
+	12   7
+	Create a priority queue shown in example in a binary max heap form. 
+    Queue will be represented in the form of array as:
+	45 31 14 13 20 7 11 12 7 
+    */
 
 	// Insert the element to the
 	// priority queue
