@@ -62,3 +62,22 @@ class LinkedList:
 
 		# Change the next of last node to new_node
 		last.next = new_node
+	
+	def deleteNode(self, head, position):
+		# Temporary value would be in the head node
+		temp = head
+		prev = head
+
+		for i in range(0, position):
+			if i == 0 and position == 1:
+				head = head.next
+			else:
+				if i == position - 1 and temp is not None:
+					prev.next = temp.next
+				else:
+					prev = temp
+
+					if prev is None:
+						break
+					temp = temp.next
+		return head
