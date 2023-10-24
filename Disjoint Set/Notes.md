@@ -13,3 +13,6 @@ $O(\alpha (n))$
 where $\alpha(n)$ is the inverse Ackermann function, which grows very steadily
 
 Space complexity: O(n) 
+
+# Applications:
+To efficiently manage disjoint sets, making it useful for various applications like finding connected components in graphs, cycle detection, and Kruskal's algorithm for finding the minimum spanning tree of a graph.
