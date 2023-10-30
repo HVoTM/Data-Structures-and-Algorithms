@@ -3,9 +3,10 @@
 #include <list>
 #include <stack>
 
+// The main class to implement Digraph and Topological Sort
 class Digraph {
 public:
-    Digraph(int V);  // Constructor
+    Digraph(int V);  // Constructor 
     ~Digraph();      // Destructor
 
     void addEdge(int v, int w);  // Add a directed edge from v to w
@@ -18,7 +19,8 @@ private:
     int V;                 // Number of vertices
     std::list<int>* adj;   // Adjacency list
     bool isDAGUtil(int v, bool visited[], bool stack[]);
-
+    
+    // Implement singly linked list for this topological sort, instead of a usual array
     struct Node {
         int data;
         Node* next;
@@ -31,6 +33,7 @@ private:
         return newNode;
     }
 
+    // Prepend a node 
     Node* insertFront(Node* head, int data) {
         Node* newNode = createNode(data);
         newNode->next = head;
@@ -38,6 +41,7 @@ private:
         return head;
     }
 
+    // Delete the whole linked list
     void deleteList(Node* head) {
         while (head) {
             Node* temp = head;
@@ -47,19 +51,25 @@ private:
     }
 };
 
+// Constructor
 Digraph::Digraph(int V) {
     this->V = V;
     adj = new std::list<int>[V];
 }
 
+// Destructor
 Digraph::~Digraph() {
     delete[] adj;
 }
 
+// Adding function add Edge, with relations from task v
+// being prioritized than task w
 void Digraph::addEdge(int v, int w) {
     adj[v].push_back(w);
 }
 
+//a utility function used to check whether the given directed graph (Digraph)
+// is a Directed Acyclic Graph (DAG) using depth-first search (DFS).
 bool Digraph::isDAGUtil(int v, bool visited[], bool stack[]) {
     if (!visited[v]) {
         visited[v] = true;
@@ -78,6 +88,7 @@ bool Digraph::isDAGUtil(int v, bool visited[], bool stack[]) {
     return false;
 }
 
+// Function to check if the graph is a Directed Acyclic Graph
 bool Digraph::isDAG() {
     bool* visited = new bool[V];
     bool* stack = new bool[V];
@@ -86,7 +97,7 @@ bool Digraph::isDAG() {
         visited[i] = false;
         stack[i] = false;
     }
-
+    // Traverse to check if visited
     for (int i = 0; i < V; i++) {
         if (isDAGUtil(i, visited, stack)) {
             delete[] visited;
@@ -100,6 +111,7 @@ bool Digraph::isDAG() {
     return true;
 }
 
+// Topological Sort algorithm
 void Digraph::topologicalSort() {
     if (!isDAG()) {
         std::cout << "The graph is not a Directed Acyclic Graph (DAG)." << std::endl;
@@ -147,10 +159,12 @@ void Digraph::topologicalSort() {
     delete[] visited;
 }
 
+// Driver code
 int main() {
     int V;  // Number of vertices
     std::vector<std::string> tasks;
 
+    // User interface: 
     // Prompt the user to enter the number of tasks and their descriptions
     std::cout << "Enter the number of tasks: ";
     std::cin >> V;
@@ -164,7 +178,7 @@ int main() {
 
     Digraph graph(V);
 
-    // Prompt the user to specify the order relations
+    // Prompt the user to specify the order relations for chosen sets of tasks
     std::cout << "Specify order relations (e.g., '3 1' means Task 3 must precede Task 1):" << std::endl;
     int task1, task2;
     while (true) {
