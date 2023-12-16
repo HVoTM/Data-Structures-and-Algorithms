@@ -101,6 +101,38 @@ class BinaryTree:
 			self._postorder_rec(root.right, result)
 			result.append(root.key)
 
+	# Function to return the height of a BST
+	def height(self, node):
+		if node is None: # Base case of an empty tree
+			return 0
+		
+		# Recursively roll down to each left-right child
+		else:
+			leftDepth = self.height(node.left)
+			rightDepth = self.height(node.right)
+			
+			# Return the height level with the larger value
+			if leftDepth > rightDepth:
+				return leftDepth + 1
+			else:
+				return rightDepth + 1
+	
+	def printgivenLevel(self, root, level):
+		if root is None:
+			return 0
+		if level == 1:
+			print(root.key, end=" ")
+		
+		elif level > 1:
+			self.printgivenLevel(root.left, level - 1)
+			self.printgivenLevel(root.right, level -1)
+	
+	def printTreeorder(self):
+		h = self.height(self.root)
+
+		for i in range(1, h+1):
+			self.printgivenLevel(self.root, i)
+			print()
 
 # Driver code
 if __name__ == '__main__':
@@ -117,3 +149,5 @@ if __name__ == '__main__':
 
 	bt.delete(30)
 	print("After deleting 30:", bt.inorder_traversal())  # Output: [20, 40, 50, 70]
+
+	bt.printTreeorder()	
