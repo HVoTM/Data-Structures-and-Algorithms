@@ -92,3 +92,7 @@ Mathematics plays a fundamental role in computer science, as it provides the the
 The specific mathematical requirements can vary depending on the area of computer science you're interested in. For example, if you're focusing on computer graphics, you might need more linear algebra and geometry. If you're diving into machine learning and AI, you'll need a strong background in linear algebra and statistics. If you're interested in cryptography, number theory and abstract algebra become more important.
 
 It's important to note that while a strong foundation in mathematics is beneficial, many practical programming and software development tasks in computer science can be accomplished without an in-depth knowledge of advanced mathematics. However, understanding the mathematical underpinnings can help you design more efficient algorithms, troubleshoot complex issues, and develop a deeper appreciation for the field.
+
+# Resources 
+- https://www.tutorialspoint.com/data_structures_algorithms/index.htm
+- https://www.geeksforgeeks.org/fundamentals-of-algorithms/?ref=shm
