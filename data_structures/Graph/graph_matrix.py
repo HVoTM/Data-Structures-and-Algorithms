@@ -14,11 +14,12 @@ class Graph:
             print(' '.join(map(str, row)))
 
 # Create a graph of 4x4 and add edges
-g = Graph(4)
-g.add_edge(0, 1)
-g.add_edge(0, 2)
-g.add_edge(1, 2)
-g.add_edge(2, 3)
+if __name__ == '__main__':
+    g = Graph(4)
+    g.add_edge(0, 1)
+    g.add_edge(0, 2)
+    g.add_edge(1, 2)
+    g.add_edge(2, 3)
 
-# Print the graph
-g.print_graph()
+    # Print the graph
+    g.print_graph()

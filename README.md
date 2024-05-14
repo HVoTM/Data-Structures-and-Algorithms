@@ -1,11 +1,13 @@
 # Data Structures and Algorithms
-rudimentary foundations for computer programmings and backbones for AI and ML theories
+<div style="background-color: white; color: red;">
+   <b>Rudimentary foundations for computer programmings and backbones for AI and ML theories </b>
+</div>
 
-# Onto the topics and their algorithms
+![The rudimentary roadmap of Data Structures and Algorithms](roadmap.gif)
 
 ## Sorting
 - [x] Insertion Sort 
-- [] Heap Sort
+- [x] Heap Sort
 - [] Selection Sort
 - [x] Merge Sort
 - [x] Quick Sort
@@ -15,12 +17,12 @@ rudimentary foundations for computer programmings and backbones for AI and ML th
 - [] Bucket Sort
 
 ## Graphs
-- [] Kruskal's Algorithm
+- [x] Kruskal's Algorithm
 - [] Djikstra's Algorithm
 - [] Bellman-Ford Algorithm
 - [] Floyd Warshall Algorithm
 - [] Prim's Algorithm
-- [] Topological Sort Algo
+- [x] Topological Sort Algo
 - [] Flood Fill Algorithm
 - [] Lee Algorithm
 

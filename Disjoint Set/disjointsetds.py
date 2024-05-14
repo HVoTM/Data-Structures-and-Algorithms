@@ -6,7 +6,7 @@ class DisjointSet:
     def __init__(self, n):
         self.parent = list(range(n))
         self.rank = [0] * n # Optimizing union by rank for now
-    
+        # 
     # Inserting a new set
     def make_set(self, x):
         self.parent[x] = x
@@ -24,15 +24,21 @@ class DisjointSet:
     # Join two subsets into a single subset. 
     # Here first we have to check if the two subsets belong to the same set.
     # If not, then we cannot perform union. 
-    def union(self,a , b): # Using Union by Rank
+    def union(self, a, b): # Using Union by Rank
         root_a = self.find(a)
         root_b = self.find(b)
 
-        if root_a != root_b:
+        if root_a != root_b: # check if two subsets belong to the same set (same root)
+            # if not, proceed
+            # check the ranks of the two root of a, b
+            # set the parent(or root of the inferior node to the root of the superior one)
             if self.rank[root_a] < self.rank[root_b]:
                 self.parent[root_a] = root_b
             elif self.rank[root_a] > self.rank[root_b]:
                 self.parent[root_b] = root_a
+            # if the two ranks are equal, set the parent of the latter order that we 
+            # have set inherently in the code to the former one's
+            # REMINDER: maybe call the preceding index as a, and the succeeding one as b
             else:
                 self.parent[root_b] = root_a
                 self.rank[root_a] += 1
