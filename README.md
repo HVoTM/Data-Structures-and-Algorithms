@@ -11,17 +11,19 @@
 - [] Selection Sort
 - [x] Merge Sort
 - [x] Quick Sort
-- [] Counting Sort
+- [x] Counting Sort
 - [x] Bubble Sort
 - [] Radix Sort
 - [] Bucket Sort
 
 ## Graphs
+- [x] BFS
+- [x] DFS
 - [x] Kruskal's Algorithm
-- [] Djikstra's Algorithm
+- [x] Djikstra's Algorithm
 - [] Bellman-Ford Algorithm
 - [] Floyd Warshall Algorithm
-- [] Prim's Algorithm
+- [x] Prim's Algorithm
 - [x] Topological Sort Algo
 - [] Flood Fill Algorithm
 - [] Lee Algorithm
@@ -39,19 +41,70 @@
 - [] Quick Select Algorithm
 - [] Boyer - More Majority Vote Algorithm
 
+## Heaps
+
 ## Basics
 - [] Huffman Coding Compression Algorithm
 - [] Euclid's Algorithm
 - [] Union Find Algorithm
 
+## Pattern Searching
+- [] KMP
+- [] Boyer-Moore
+
+## Greedy Method
+- [] Knapsack Problem
+
+## Dynamic Programming
+
 ## Mathematical Algorithm
 - [x] Horner's Evaluation
 
-## Miscellaneous
+
+## Fourier Transform Algorithm
+- [] Fast Fourier Transform
+
+## Miscellaneous/ To reorganize later
 - [x] Tower of Hanoi
-- [] Knapsack Problem
 - [] Travelling Salesman Problem
-- [] Dynamic Programming
+- [] String matching algorithm
+- [] [Graph Coloring](https://www.youtube.com/watch?v=wTJI_WuZSwE&list=PLZHQObOWTQDMXMi3bUMThGdYqos36X_lA&index=14&ab_channel=3Blue1Brown)
+- [] Sliding Window
+- [] Bit Manipulation/ BitWise algorithms
+- [] Branch and Bound
+- [] Backtracking
+- [] Divide and Conquer
+- [] Geometric algorithm
+- [] Linear Programming 
+- [] Hashing Algorithm
+- [] Link Analysis
+- [] Modulo Arithmetic Algorithm
+- [] String Matching and Parsing Algorithm
+- [] Integer Factorization Algorithm
+
+## Artificial Intelligence
+- [] Minimax Algorithms
+- [] Monte Carlo Tree Search
+
+## Machine Learning and Tools (NOTE: Reorganize later)
+- [] Principal Component Analysis
+- [] Linear Regression
+- [] Singular Value Decomposition
+
+# Data Structures Interview Prep
+https://www.youtube.com/watch?v=RYT08CaYq6A&ab_channel=AlgoMonster
+
+- Two Pointers
+- Sliding Window
+- Binary Search
+- Stack/ Queue
+- Breadth-First Search (BFS Traversal)
+- Depth-First Search (DFS Traversal)
+- Backtracking
+- Dynamic Programming
+- Greedy Method
+- Priority Queue (Top K)
+- Postulating the time and space complexity 
 
 # The Maths you need for Computer Science
 

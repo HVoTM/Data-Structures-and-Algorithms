@@ -25,7 +25,8 @@ class BinaryTree:
 		else:
 			root.right = self.insert_rec(root.right, data)
 		return root
-	
+
+	# Relevance: LEETCODE 450	
 	def delete(self, key):
 		self.root = self._delete_rec(self.root, key)
 
