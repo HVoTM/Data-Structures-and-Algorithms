@@ -1,6 +1,6 @@
 # main function for the Monte Carlo Tree Search
 def monte_carlo_tree_search(root):
-	
+	# 
 	while resources_left(time, computational power):
 		leaf = traverse(root) 
 		simulation_result = rollout(leaf)
